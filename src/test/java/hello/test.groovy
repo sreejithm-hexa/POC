@@ -1,13 +1,19 @@
+@Library('shared-lib-unitTesting')_
 import org.junit.Test
 import static org.junit.Assert.assertEquals
-class SimpleUnitTest {
-   @Test
-   void shouldAdd() {
-     assertEquals("Groovy should add correctly", 2, 1 + 1)
-   }
+class SimpleUnitTest extends BasePipelineTest {
+   def temp
+   
+   @Before
+    void setUp() {
+        super.setUp()
+        // load temp
+        temp = loadScript("vars/temp.groovy")
 
    @Test
-   void Temperatureconverter() {
-       assert 36 == def temp(95)
-   }
+    void Temperatureconverter() {
+        // call temp and check result
+        def result = temp(95)
+        assertEquals(35, result)
+    }
 }
