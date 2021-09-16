@@ -14,7 +14,7 @@ pipeline {
         }
         stage ('test') {
 	        steps {
-		       Excecute('test')
+		       Execute('test')
             }
         }
 	stage ('Tempertaure conversion') {
