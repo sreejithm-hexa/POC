@@ -13,7 +13,7 @@ class SimpleUnitTest extends BasePipelineTest {
     void setUp() {
         super.setUp()
         // load temp
-        def t = library 'my-shared-library' 
+        def t = library 'shared-lib-unitTesting' 
         temp = t.vars.temp(98)
     }
 
