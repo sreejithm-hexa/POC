@@ -19,7 +19,7 @@ class SimpleUnitTest extends BasePipelineTest {
    @Test
     void Temperatureconverter() {
         // call temp and check result
-        def result = temp(95)
-        assertEquals(35, result)
+        def result = temp(98)
+        assertEquals(36.6666666667, result)
     }
 }
