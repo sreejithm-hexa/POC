@@ -1,5 +1,11 @@
 package hello;
 
+
+@Library('shared-lib-unitTesting')_
+import com.lesfurets.jenkins.unit.*;
+import static groovy.test.GroovyAssert.*;
+import static org.junit.Assert.assertEquals;
+
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -43,4 +49,20 @@ public class TestGreeter {
    }
    */
    
+}
+class SimpleUnitTest extends BasePipelineTest {
+   def temp
+   
+   @Before
+    void setUp() {
+        super.setUp()
+        // load temp
+        temp = loadScript("vars/temp.groovy")
+
+   @Test
+    void Temperatureconverter() {
+        // call temp and check result
+        def result = temp(95)
+        assertEquals(35, result)
+    }
 }
