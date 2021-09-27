@@ -11,6 +11,7 @@ class SimpleUnitTest extends BasePipelineTest {
         super.setUp()
         // load temp
         temp = loadScript("vars/temp.groovy")
+    }
 
    @Test
     void Temperatureconverter() {
