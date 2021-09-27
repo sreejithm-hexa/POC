@@ -14,13 +14,13 @@ class SimpleUnitTest extends BasePipelineTest {
         super.setUp()
         // load temp
         //temp= loadscript("library('my-shared-library').vars") 
-        //temp = loadScript("vars/temp.groovy") 
+        temp = loadScript('vars/temp.groovy') 
     }
 
    @Test
     void Temperatureconverter() {
         // call temp and check result
         def result = temp(98)
-        assertEquals(36.6666666667, result)
+        assert 36.6666666667 == result)
     }
 }
