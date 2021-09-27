@@ -14,7 +14,7 @@ class SimpleUnitTest extends BasePipelineTest {
         super.setUp()
         // load temp
         //temp= loadscript("library('my-shared-library').vars") 
-        temp = loadScript("vars/temp.groovy") 
+        //temp = loadScript("vars/temp.groovy") 
     }
 
    @Test
