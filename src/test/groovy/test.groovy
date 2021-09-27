@@ -1,4 +1,4 @@
-@Library('shared-lib-unitTesting')_
+//@Library('shared-lib-unitTesting')_
 
 import org.junit.Test
 import org.junit.Before
@@ -13,7 +13,7 @@ class SimpleUnitTest extends BasePipelineTest {
     void setUp() {
         super.setUp()
         // load temp
-        //temp= loadscript("library('my-shared-library').vars") 
+        def t = library 'my-shared-library' 
         temp = loadScript('vars/temp.groovy') 
     }
 
