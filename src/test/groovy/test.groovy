@@ -15,7 +15,7 @@ class SimpleUnitTest extends BasePipelineTest {
         // load temp
         def t = library 'shared-lib-unitTesting'
         //temp = loadScript("vars/temp.groovy")
-        temp = t.vars.*
+        temp = import t.vars.*
     }
 
    @Test
