@@ -7,7 +7,7 @@ import static groovy.test.GroovyAssert.*
 import static org.junit.Assert.assertEquals
 
 class SimpleUnitTest extends BasePipelineTest {
-   def temp = load("vars/temp(98)")
+   def temp = loadScript("vars/temp(98)")
 
    @Before
     void setUp() {
