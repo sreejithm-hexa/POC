@@ -1,4 +1,4 @@
-//@Library('shared-lib-unitTesting')_
+library 'shared-lib-unitTesting'
 
 import org.junit.Test
 import org.junit.Before
