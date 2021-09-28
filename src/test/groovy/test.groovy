@@ -1,4 +1,4 @@
-//@Library('shared-lib-unitTesting')_
+@Library('shared-lib-unitTesting')_
 
 import org.junit.Test
 import org.junit.Before
@@ -12,15 +12,16 @@ class SimpleUnitTest extends BasePipelineTest {
     void setUp() {
         super.setUp()
         // load temp
-        def t = library 'shared-lib-unitTesting'
-        def temp = t.vars.temp(98)
+        //def t = library 'shared-lib-unitTesting'
+        //def temp = t.vars.temp(98)
+        def temp = load("vars/temp.groovy")
 
     }
 
    @Test
     void Temperatureconverter() {
         // call temp and check result
-        //def result = temp(98)
-        assertEquals(36.6666666667,temp)
+         def result = temp(98)
+        assertEquals(36.6666666667,result)
     }
 }
