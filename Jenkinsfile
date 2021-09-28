@@ -1,4 +1,4 @@
-@Library('shared-lib-unitTesting')_
+@Library('Shared-Library')_
 pipeline {
     agent any
     stages {
