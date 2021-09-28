@@ -7,15 +7,15 @@ import static groovy.test.GroovyAssert.*
 import static org.junit.Assert.assertEquals
 
 class SimpleUnitTest extends BasePipelineTest {
-   def temp = loadScript("vars/temp(98)")
+   def temp
 
-   /*@Before
+   @Before
     void setUp() {
         super.setUp()
         // load temp
         //def t = library 'shared-lib-unitTesting'
-        //def temp = t.vars.temp(98)
-    }*/
+        temp = loadScript("vars/temp(98)")
+    }
 
    @Test
     void Temperatureconverter() {
