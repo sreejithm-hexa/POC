@@ -14,14 +14,14 @@ class SimpleUnitTest extends BasePipelineTest {
         // load temp
         //def t = library 'shared-lib-unitTesting'
         //def temp = t.vars.temp(98)
-        def temp = load("vars/temp.groovy")
+        def temp = load("vars/temp(98)")
 
     }
 
    @Test
     void Temperatureconverter() {
         // call temp and check result
-         def result = temp(98)
+         def result = temp
         assertEquals(36.6666666667,result)
     }
 }
