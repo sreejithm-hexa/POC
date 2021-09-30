@@ -2,25 +2,12 @@
 pipeline {
     agent any
     stages {
-	 stage ('Clean') {
-	        steps {
-		       sh '/opt/gradle/gradle-6.4.1/bin/gradle clean'
+        stage('Build') {
+            steps {
+                execGradle("test")
+                execGradle("build")
             }
-        }
-	stage ('Build') {
-	        steps {
-		       sh '/opt/gradle/gradle-6.4.1/bin/gradle build'
-            }
-        }
-        stage ('test') {
-	        steps {
-		       Execute('test')
-            }
-        }
-	stage ('Tempertaure conversion') {
-		steps {
-			temp(98)
-		}
-	}
+        }    
     }
 }
+ 
