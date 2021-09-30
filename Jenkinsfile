@@ -1,13 +1,25 @@
-@Library('Shared-Library')_
 pipeline {
-    agent any
+   agent any
     stages {
-        stage('Build') {
-            steps {
-                execGradle("test")
-                execGradle("build")
+	 stage ('Clean') {
+	        steps {
+		       sh '/opt/gradle/gradle-6.4.1/bin/gradle clean'
             }
-        }    
+        }
+	stage ('Build') {
+	        steps {
+		       sh '/opt/gradle/gradle-6.4.1/bin/gradle build'
+            }
+        }
+        stage ('test') {
+	        steps {
+		       Execute('test')
+            }
+        }
+	stage ('Tempertaure conversion') {
+		steps {
+			temp(98)
+		}
+	}
     }
 }
- 
