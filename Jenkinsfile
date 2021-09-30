@@ -1,9 +1,13 @@
-node {
-  
-  def image
-  def gardleHome = tool 'gradle'
+@Library("shared-lib") _
 
-    stage ('Build') {
-            sh '/opt/gradle/gradle-6.4.1/bin/gradle build'            
-        }
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                execGradle("test")
+                execGradle("build")
+            }
+        }    
+    }
 }
