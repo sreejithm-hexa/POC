@@ -1,3 +1,4 @@
+node {
   
   def image
   def gardleHome = tool 'gradle'
