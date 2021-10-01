@@ -17,6 +17,11 @@ pipeline {
 		       Execute('test')
             }
         }
+	stage ('MavenOps') {
+	        steps {
+		       sh '/opt/apache-maven-3.6.3/bin/mvn clean install'
+            }
+        } 
 	stage ('Tempertaure conversion') {
 		steps {
 			temp(98)
