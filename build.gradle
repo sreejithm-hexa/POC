@@ -27,7 +27,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 */
-
+apply plugin: 'maven'
 plugins {
    id 'java'
    id 'application'
