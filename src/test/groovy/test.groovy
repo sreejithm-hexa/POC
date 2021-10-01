@@ -1,4 +1,4 @@
-//library 'shared-lib-unitTesting'
+library 'shared-lib-unitTesting'
 //import vars.*
 
 import org.junit.Test
