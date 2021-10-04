@@ -20,7 +20,7 @@ pipeline {
 	stage ('MavenOps') {
 	        steps {
 			script {
-		       		maven.call(CLEAN: 'clean',INSTALL: 'install')
+		       		maven.info(CLEAN: 'clean',INSTALL: 'install')
 			}
             }
         } 
