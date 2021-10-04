@@ -6,7 +6,9 @@ pipeline {
     stages {
 	    stage ('MVN') {
 		    steps {
+			    script {
 			     utils.mvn 'clean package'
+			    }
 		    }
 	    }
     }
