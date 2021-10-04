@@ -3,7 +3,7 @@ pipeline {
    agent any
 	def utils = new MavenUtil(this)
     stages {
-	    stage {
+	    stage ('MVN') {
 		    steps {
 			     utils.mvn 'clean package'
 		    }
