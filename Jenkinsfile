@@ -1,6 +1,6 @@
 @Library('shared-example')_
 import com.code
-def utils = MavenUtil(this)
+def utils = new MavenUtil(this)
 pipeline {
    agent any
     stages {
