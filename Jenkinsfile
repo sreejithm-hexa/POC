@@ -1,5 +1,5 @@
-@Library('shared-example')_
-import com.code
+@Library('shared-example') import com.code.app
+
 def utils = new MavenUtil(this)
 pipeline {
    agent any
