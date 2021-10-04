@@ -1,4 +1,4 @@
-@Library('shared-example') import com.code.app
+@Library('shared-example') import com.code.app.code
 
 def utils = new MavenUtil(this)
 pipeline {
