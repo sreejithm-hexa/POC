@@ -1,33 +1,14 @@
-@Library('shared-example')_
+@Library('shared-example') import com
 pipeline {
    agent any
+	def utils = new MavenUtil(this)
     stages {
-	 stage ('Clean') {
-	        steps {
-		       sh '/opt/gradle/gradle-6.4.1/bin/gradle clean'
-            }
-        }
-	stage ('Build') {
-	        steps {
-		       sh '/opt/gradle/gradle-6.4.1/bin/gradle build'
-            }
-        }
-        stage ('test') {
-	        steps {
-		       Execute('test')
-            }
-        }
-	stage ('MavenOps') {
-	        steps {
-			script {
-		       		maven.info(CLEAN: 'clean',INSTALL: 'install')
-			}
-            }
-        } 
-	stage ('Tempertaure conversion') {
-		steps {
-			temp(98)
-		}
-	}
+	    stage {
+		    steps {
+			     utils.mvn 'clean package'
+		    }
+	    }
     }
 }
+			    
+		    
