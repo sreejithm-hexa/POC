@@ -19,7 +19,7 @@ pipeline {
         }
 	stage ('MavenOps') {
 	        steps {
-		       maven("clean", "install")
+		       maven ('clean', 'install')
             }
         } 
 	stage ('Tempertaure conversion') {
