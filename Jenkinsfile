@@ -1,4 +1,4 @@
-@Library('shared-example')_
+@Library('shared-example') import com.app.code
 
 
 def utils = new MavenUtil(this)
