@@ -10,6 +10,7 @@ pipeline {
   	stage("pack") {
 		steps {
 			script {
+				echo %maven_home%
 				utils.mvn 'clean package'
 			}
 		}
