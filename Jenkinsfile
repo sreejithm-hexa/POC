@@ -1,4 +1,5 @@
 @Library('shared-example')_
+import groovy.json.JsonSlurper
 import com.app.*
 
 def utils = new MavenUtil(this)
