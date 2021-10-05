@@ -9,7 +9,9 @@ pipeline {
   stages {
   	stage("Maven Ops") {
 		steps {
-			utils.mvn 'clean package'
+			script {
+				utils.mvn 'clean package'
+			}
 		}
 	}
   }	
