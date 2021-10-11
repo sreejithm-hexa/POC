@@ -10,7 +10,7 @@ pipeline {
 	   stage ('Test') {
 	        steps {
 			script {
-		       		props.MavenInstall
+		       		props(mavenInstall)
 			}
             }
         }
