@@ -2,6 +2,7 @@
 import com.app.MavenUtil
 
 def props = readProperties  file:'dir/jenkins.properties'
+def vars = props[mavenInstall]
 //def utils = new MavenUtil(this)
 
 pipeline {
@@ -9,9 +10,7 @@ pipeline {
    stages {
 	   stage ('Test') {
 	        steps {
-			script {
-		       		props(mavenInstall)
-			}
+			echo vars
             }
         }
    }	
