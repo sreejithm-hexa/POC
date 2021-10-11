@@ -2,7 +2,7 @@
 import com.app.MavenUtil
 
 def props = readProperties  file:'dir/jenkins.properties'
-def vars = props[mavenInstall]
+def vars = props['mavenInstall']
 //def utils = new MavenUtil(this)
 
 pipeline {
