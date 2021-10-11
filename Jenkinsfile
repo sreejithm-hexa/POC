@@ -9,7 +9,9 @@ pipeline {
    stages {
 	   stage ('Test') {
 	        steps {
-		       props(MavenInstall)
+			script {
+		       		props(MavenInstall)
+			}
             }
         }
    }	
